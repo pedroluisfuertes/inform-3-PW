@@ -1,0 +1,19 @@
+#imagen-relacionada {
+	width: 49%;
+}
+#imagen-relacionada > img {
+	width: 100%;
+}
+#libros-mas-valorados {
+	width: 49%;
+}
+.libros-valorados-img {
+	width: 50%;
+}
+.libros-valorados-img > img{
+	max-width: 100%;
+	max-height: 6em;
+}
+.libros-valorados-info {
+	width: 50%;
+}

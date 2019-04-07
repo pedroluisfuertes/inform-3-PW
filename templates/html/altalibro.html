@@ -1,0 +1,60 @@
+{% extends "templates/html/base.html" %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="templates/css/altalibro.css"/>
+{% endblock %}
+{% block main %}
+<form action="#" >
+	<div class="flex-container flex-direction-column justify-content-space-around bordes">
+		<section  class="flex-container" id="informacion-libro">
+			<section class="flex-container justify-content-center align-items-center" id="libro-img">
+				<div class="flex-container align-items-center justify-content-center" class="bordes" >
+					<img src="templates/img/imagen-relacionada.jpg">
+				</div>
+			</section>
+			<section class="flex-container justify-content-center" id="libro-info">
+				<fieldset class="flex-container flex-direction-column">
+	    			<legend>Información básica del libro:</legend>
+					<label for="titulo">Título: </label>
+	  				<input type="text" name="titulo" id="titulo">
+	  				<label for="autor">Autor: </label>
+	  				<input type="text" name="autor" id="autor">
+	  				<label for="editorial">Editorial:</label>
+	  				<select name="editorial" id="editorial">
+	  					<option value="planeta">Planeta</option>
+	  					<option value="anaya">Anaya</option>
+	  					<option value="santillana">Santillana</option>
+	  					<option value="almadia">Almadía</option>
+	  					<option value="alba">Alba</option>
+	  				</select>
+	  				<label for="ano">Año de publicación:</label>
+	  				<input type="date" name="ano" id="ano">
+	  				<label for="edicion">Edición: </label>
+	  				<input type="number" name="edicion" id="edicion">
+	  			</fieldset>
+			</section>
+		</section>
+		<section id="descripcion-libro">
+			<h2>Descripción</h2>
+			<textarea name="descripcion"></textarea>
+		</section>
+		<section id="opinion-libro">
+			<h2>Opinión</h2>
+			<textarea name="opinion"></textarea>
+		</section>
+		<section id="valoracion-libro">
+			<h2>Valoración</h2>
+			<section class="flex-container" id="valoracion">
+				{% for i in 1..5 %}
+				<div>
+				  	<input type="radio" id="{{i}}" name="valoracion" value="{{i}}">
+				  	<label for="{{i}}">{{i}}</label>
+				</div>
+				{% endfor %}
+			</section>
+		</section>
+		<section class="flex-container justify-content-flex-end" id="enviar">
+			<input type="submit" value="Enviar">
+		</section>
+	</div>
+</form>
+{% endblock %}

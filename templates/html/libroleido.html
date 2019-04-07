@@ -1,0 +1,50 @@
+{% extends "templates/html/base.html" %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="templates/css/libroleido.css"/>
+{% endblock %}
+{% block main %}
+<div class="flex-container flex-direction-column justify-content-space-around bordes">
+	<section  class="flex-container" id="informacion-libro">
+		<section class="flex-container justify-content-center align-items-center" id="libro-img">
+			<div class="flex-container align-items-center justify-content-center" class="bordes" >
+				<img src="templates/img/imagen-relacionada.jpg">
+			</div>
+		</section>
+		<section id="libro-info">
+			<dl>
+				<dt>Título:</dt>
+				<dd>Titulo del libro</dd>
+				<dt>Autor:</dt>
+				<dd>Autor del libro</dd>
+				<dt>Editorial:</dt>
+				<dd>Editorial del libro</dd>
+				<dt>Edición:</dt>
+				<dd>Edición del libro</dd>
+			</dl>
+		</section>
+	</section>
+	<section id="descripcion-libro">
+		<h2>Descripción</h2>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque hendrerit vulputate commodo. Nunc condimentum in ex ultrices sollicitudin. Cras mattis sodales dolor nec auctor. Morbi augue nunc, facilisis ac libero vitae, interdum fermentum augue. Morbi auctor, nisi in tincidunt placerat, dui felis fermentum enim, eget auctor arcu magna tristique erat. Proin ullamcorper, lectus vitae vehicula interdum, dui ligula imperdiet nunc, eget suscipit justo justo sit amet turpis. Proin porta dolor at turpis hendrerit, sed egestas felis sagittis. Praesent rhoncus, mauris eget condimentum pharetra, augue justo ultrices mauris, a cursus tortor velit eget lectus. Integer magna lorem, fermentum eget turpis vel, scelerisque auctor nisi. Sed nec lacinia elit, vel semper odio. Sed hendrerit massa at enim condimentum, eget varius felis pulvinar. Praesent mattis augue ut nibh aliquam, sed consequat odio luctus. Pellentesque felis lacus, commodo a magna vitae, porttitor ultrices elit. Etiam feugiat aliquam pulvinar.
+		</p>
+	</section>
+	<section id="opinion-libro">
+		<h2>Opinión</h2>
+		<p>
+			Phasellus ipsum mi, dignissim non ante at, pharetra consequat nulla. Phasellus sollicitudin dui eu justo tincidunt, eu elementum libero laoreet. Nam quis ligula nulla. Phasellus porta elit ac sem fermentum, sed semper lectus bibendum. Sed vitae venenatis velit. Vestibulum eget blandit mauris. Phasellus imperdiet libero non bibendum pellentesque.
+		</p>
+	</section>
+	<section id="valoracion-libro">
+		<h2>Valoración</h2>
+		<section class="flex-container" id="valoracion">
+			{% for i in 1..5 %}
+			<div>
+			  	<input type="radio" id="{{i}}" name="valoracion" value="{{i}}">
+			  	<label for="{{i}}">{{i}}</label>
+			</div>
+			{% endfor %}
+		</section>
+	</section>
+</div>
+{% endblock %}

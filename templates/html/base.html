@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>Recomendación de libros</title>
+    <link rel="stylesheet" type="text/css" href="templates/css/base.css"/>
+    {% block css %}{% endblock %}
+</head>
+<body class="flex-container flex-direction-column align-items-center">
+	<div id="contenedor-principal">
+		<header class="flex-container align-items-center bordes justify-content-space-around">
+			<section id="header-logo">
+				<a href="index2.php"><img id="header-logo-imagen" src="templates/img/logo.jpg"></a>
+			</section>
+			<section  id="header-nombre">
+				<p>Sistema de recomendación de libros</p>
+			</section>
+			<section id="header-login">
+				{% block login %}
+				<p>Bienvenido usuario</p>
+				<a href="index.php">Desconectarse</a>
+				{% endblock %}
+			</section>
+		</header>
+		{% block nav %}
+		<nav class="flex-container justify-content-space-around">
+			<a href="mislibros.php">Mis Libros</a>
+			<a href="index2.php">Foro</a>
+			<a href="index2.php">Mis Datos</a>
+			<a href="index2.php">Mis Recomendaciones</a>
+		</nav>
+		{% endblock %}
+		<main>
+			{% block main %}{% endblock %} 
+		</main>
+		<footer class="bordes">
+			<section class="flex-container flex-direction-row justify-content-space-around align-items-center">
+				<a href="">Contacto</a>
+				<p>--</p>
+				<a href="">Cómo se hizo</a>
+			</section>
+		</footer>
+	</div>
+	{% block javaScript %}{% endblock %} 
+</body>
+</html>

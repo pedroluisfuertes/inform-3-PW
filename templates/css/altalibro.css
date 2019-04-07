@@ -1,0 +1,37 @@
+#libro-img {
+	width: 40%;
+}
+#libro-img > div {
+	height: 85%;
+	width: 85%;
+}
+#libro-img > div > img{
+	max-height: 100%;
+	max-width: 100%;
+}
+#libro-info {
+	width: 60%;
+}
+#libro-info {
+	margin-left: 2em;
+}
+#libro-info > fieldset {
+	margin-left: 2em;
+	width: 40%;
+}
+#informacion-libro {
+	max-height: 16em; 
+}
+
+#descripcion-libro > textarea{
+	width: 100%;  
+	height: 10em; 
+}
+
+#opinion-libro  > textarea{
+	width: 100%;  
+	height: 10em; 
+}
+#enviar > input {
+	margin-right:  5em; 
+}

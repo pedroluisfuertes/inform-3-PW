@@ -1,0 +1,22 @@
+{% extends "templates/html/base.html" %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="templates/css/index.css"/>
+{% endblock %}
+{% block main %}
+<div class="flex-container justify-content-space-around bordes">
+	<section class="flex-container flex-direction-column justify-content-center bordes" id="imagen-relacionada">
+		<img src="templates/img/imagen-relacionada.jpg">
+	</section>
+	<section id="libros-mas-valorados" class="bordes">
+		<h1>Libros mejor valorados</h1>
+		<section class="flex-container flex-direction-column" id="libros-valorados">
+			{% include 'templates/html/componentes/librosMejorValorados.html' %}
+			{% include 'templates/html/componentes/librosMejorValorados.html' %}
+			{% include 'templates/html/componentes/librosMejorValorados.html' %}
+			{% include 'templates/html/componentes/librosMejorValorados.html' %}
+		</section>
+	</section>
+</div>
+{% endblock %}
+{% block js %}
+{% endblock %}

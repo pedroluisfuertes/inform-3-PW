@@ -1,0 +1,21 @@
+#libro-img {
+	width: 40%;
+}
+#libro-img > div {
+	height: 85%;
+	width: 85%;
+}
+#libro-img > div > img{
+	max-height: 100%;
+	max-width: 100%;
+}
+#libro-info {
+	width: 60%;
+}
+#libro-info {
+	margin-left: 2em;
+}
+
+#informacion-libro {
+	max-height: 10em; 
+}

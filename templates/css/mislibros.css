@@ -1,0 +1,43 @@
+#libros-leidos-usuario {
+	width: 49%;
+}
+#libros-leidos-usuario-libros {
+	overflow: scroll;
+	max-height: 40em;
+}
+#libros-leidos-usuario-libros > :nth-child(even)  {
+    background-color: #CDCDCD;
+}
+#ultimos-libros-añadidos {
+	width: 49%;
+}
+.libros-leidos-img {
+	width: 50%;
+	max-height: 100%;
+}
+.libros-leidos-img > img{
+	max-width: 100%;
+	max-height: 6em;
+}
+.libros-leidos-info {
+	width: 50%;
+}
+#libro-leido {
+	max-height: 10em;
+}
+@media only screen and (max-width: 600px) {
+
+	#libros-leidos-usuario {
+		width: 100%;
+	}
+
+	#libros-leidos-usuario-libros > :nth-child(even)  {
+	    background-color: #CDCDCD;
+	}
+	#ultimos-libros-añadidos {
+		width: 100%;
+	}
+	#contenedor-principal{
+		width: 100%;
+	}
+}

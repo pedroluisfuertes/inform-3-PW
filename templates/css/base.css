@@ -1,0 +1,76 @@
+.flex-container {
+	display: flex;
+}
+.flex-direction-column {
+	flex-direction: column;
+}
+.flex-direction-row {
+	flex-direction: row;
+}
+.flex-wrap-wrap{
+	flex-wrap: wrap;
+}
+
+.justify-content-flex-start{
+	justify-content: flex-start;
+}
+
+.justify-content-center{
+	justify-content: center;
+}
+.justify-content-flex-end{
+	justify-content: flex-end;
+}
+.justify-content-flex-start{
+	justify-content: flex-start;
+}
+.justify-content-space-around{
+	justify-content: space-around;
+}
+.align-items-center{
+	align-items: center; 
+}
+.align-items-flex-start{
+	align-items: flex-start; 
+}
+.align-items-flex-end{
+	align-items: flex-end; 
+}
+.align-items-stretch{
+	align-items: stretch;
+}
+
+#contenedor-principal{
+	width: 75%;
+}
+
+#header-logo {
+	width: 25%; 
+}
+#header-logo > img {
+	width: 50%; 
+}
+#header-nombre {
+	width: 50%; 
+}
+#header-logo-imagen {
+	width: 25%;
+}
+header {
+	min-height: 8em;
+}
+/*
+#header-formulario-login{
+	display: grid;
+	grid-template-rows: 100% 100% 100%;
+}
+#header-login {
+	display: grid;
+	grid-template-rows: 100% 100%;
+}
+*/
+.bordes{
+	border-style: solid;
+    border-color: darkslategrey;
+    border-radius: 30px;
+}
