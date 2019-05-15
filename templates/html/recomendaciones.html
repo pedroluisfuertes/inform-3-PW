@@ -1,0 +1,14 @@
+{% extends "templates/html/base.html" %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="templates/css/recomendaciones.css"/>
+{% endblock %}
+{% block main %}
+<div class="flex-container flex-direction-column justify-content-space-around bordes">
+	<h1>Libros recoemndados: </h1>
+	<section class="libros-recomendados">
+		{% for i in 1..6 %}
+		{% include 'templates/html/componentes/libroRecomendado.html' %}
+		{% endfor %}
+	</section>
+</div>
+{% endblock %}

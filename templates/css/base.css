@@ -59,6 +59,9 @@
 header {
 	min-height: 8em;
 }
+#menu-principal {
+	height: 2.5em;
+}
 /*
 #header-formulario-login{
 	display: grid;

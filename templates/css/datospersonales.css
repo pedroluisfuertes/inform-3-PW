@@ -1,0 +1,22 @@
+#formulario-datos > form {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+}
+#formulario-datos > form {
+	margin: 1em; 
+}
+
+#formulario-datos > form > :nth-child(odd) {
+	margin-top: 1em; 
+}
+
+#formulario-datos > form > input[type="submit"]{
+	width: fit-content;
+	/* centramos */
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	margin-bottom: 1em; 
+}

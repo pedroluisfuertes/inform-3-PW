@@ -7,7 +7,8 @@
 	
 	$argumentos = controlDeUsuarios();
 
-	$template = $twig -> load('./templates/html/libroleido.html');
+
+	$template = $twig -> load('./templates/html/hiloForo.html');
 	
 	echo $template -> render($argumentos);
 	

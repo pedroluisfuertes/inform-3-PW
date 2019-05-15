@@ -1,0 +1,74 @@
+.mensaje-hilo{
+	width: 100%;
+	/*max-height: 10em;*/
+}
+.mensaje-hilo-autor {
+	width: 19%; 
+	border-style: solid;
+    border-color: blue;
+    border-width: 2px;
+}
+.mensaje-hilo-mensaje {
+	width: 79%; 
+	border-style: solid;
+    border-color: blue;
+    border-width: 2px;
+}
+.mensaje-hilo-mensaje-fecha {
+	height: 2.5em; 
+	border-style: solid;
+    border-color: blue;
+    border-width: 1.5px;
+}
+.cabecera-hilos > section{
+	margin-top: 1em; 
+}
+.cabecera-hilos {
+	width: 100%;
+}
+.cabecera-hilo-autor {
+	width: 19%;
+	background-color: blue;
+	border-style: solid;
+    border-color: blue;
+    border-width: 2px;
+}
+.cabecera-hilo-mensajes {
+	width: 79%; 
+	background-color: blue;
+	border-style: solid;
+    border-color: blue;
+    border-width: 2px;
+
+}
+.mensajes-hilo > :nth-child(odd) > section {
+    background-color: #CDCDCD;
+}
+
+.anadir-mensaje {
+	width: 100%;
+}
+
+.anadir-mensaje > form > *{
+	width: 100%;
+}
+
+.anadir-mensaje > form {
+	width: 80%; 
+	/* Lo centramos */
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+.anadir-mensaje > form > input[type="submit"]{
+	width: auto;
+	/* Lo centramos */
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	margin-bottom: 2em; 
+}
+
+.anadir-mensaje > form > textarea{
+	min-height: 6em; 
+}

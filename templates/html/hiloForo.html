@@ -1,0 +1,31 @@
+{% extends "templates/html/base.html" %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="templates/css/hiloForo.css"/>
+{% endblock %}
+{% block main %}
+<div class="flex-container flex-direction-column justify-content-space-around bordes">
+	<section class="cabecera-hilos flex-container justify-content-center">
+		<section class="cabecera-hilo-autor flex-container justify-content-center">
+			<p>Autor</p>
+		</section>
+		<section class="cabecera-hilo-mensajes flex-container justify-content-center">
+			<p>Mensajes</p>
+		</section>
+	</section>
+	<section class="mensajes-hilo">
+		{% for i in 1..6 %}
+		{% include 'templates/html/componentes/mensajeForo.html' %}
+		{% endfor %}
+	</section>
+	<section class="anadir-mensaje">
+		<h2>Añade un nuevo mensaje</h2>
+		<form class="flex-container flex-direction-column align-items-center">
+			<label class="anadir-mensaje-titulo">Título</label>
+			<input type="text" name="anadir-mensaje-titulo" class="anadir-mensaje-titulo">
+			<label class="anadir-mensaje-descripcion">Descripción</label>
+			<textarea name="anadir-mensaje-descripcion" class="anadir-mensaje-descripcion"></textarea> 
+			<input type="submit" value="Enviar">
+		</form>
+	</section>
+</div>
+{% endblock %}

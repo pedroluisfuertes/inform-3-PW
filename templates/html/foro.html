@@ -1,0 +1,34 @@
+{% extends "templates/html/base.html" %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="templates/css/foro.css"/>
+{% endblock %}
+{% block main %}
+<div class="flex-container flex-direction-column justify-content-space-around bordes">
+	<section class="cabecera-hilos flex-container justify-content-center">
+		<section class="cabecera-hilo-foro">
+			<p>Foro</p>
+		</section>
+		<section class="cabecera-hilo-numero-mensajes">
+			<p>Numero mensajes</p>
+		</section>
+		<section class="cabecera-hilo-ultimo-mensaje">
+			<p>Último Mensaje</p>
+		</section>
+	</section>
+	<section class="hilos">
+		{% for i in 1..6 %}
+		{% include 'templates/html/componentes/hiloForo.html' %}
+		{% endfor %}
+	</section>
+	<section class="anadir-hilo">
+		<h2>Añade un nuevo hilo</h2>
+		<form class="flex-container flex-direction-column align-items-center">
+			<label class="anadir-hilo-titulo">Título</label>
+			<input type="text" name="anadir-hilo-titulo" class="anadir-hilo-titulo">
+			<label class="anadir-hilo-descripcion">Descripción</label>
+			<textarea name="anadir-hilo-descripcion" class="anadir-hilo-descripcion"></textarea> 
+			<input type="submit" value="Enviar">
+		</form>
+	</section>
+</div>
+{% endblock %}

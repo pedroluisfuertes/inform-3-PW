@@ -1,0 +1,40 @@
+.libros-recomendados {
+	width: 100%; 
+}
+.libro-recomendado {
+	height: 10em; 
+	width: 100%; 
+}
+.libro-recomendado-img {
+	width: 10%;
+	max-height: 100%;
+}
+.libro-recomendado-img > div {
+	max-width: 85%;
+	height: 10em; 
+}
+.libro-recomendado-img > div > img{
+	max-height: 85%;
+	max-width: 85%;
+}
+.libro-recomendado-info {
+	width: 90%;
+}
+.libro-recomendado-info {
+	margin-left: 2em;
+}
+.libro-recomendado-info > p{
+	margin-left: 1em; 
+	margin-right: 1em; 
+}
+.libro-recomendado-info > div{
+	width: 40%; 
+}
+.libro-recomendado-info > p{
+	margin-left: 1em; 
+	margin-right: 1em; 
+}
+
+.libros-recomendados > :nth-child(even)  {
+    background-color: #CDCDCD;
+}

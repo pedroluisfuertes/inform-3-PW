@@ -1,0 +1,25 @@
+{% extends "templates/html/base.html" %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="templates/css/altausuario.css"/>
+{% endblock %}
+{% block main %}
+<div class="flex-container flex-direction-column">
+	<h1>Registrarse</h1>
+	<section id="formulario-datos">
+		<form method="post">
+			<label id="datos-nombre">Nombre</label>
+			<input type="text" name="nombre" id="datos-nombre" required="">
+			<label id="datos-apellidos">Apellidos</label>
+			<input type="text" name="apellidos" id="datos-apellidos" required="">
+			<label id="datos-edad">Edad</label>
+			<input type="number" name="edad" id="datos-edad">
+			<label id="datos-email">E-mail</label>
+			<input type="email" name="email" id="datos-email" required="">
+			<label id="datos-password">Contraseña</label>
+			<input type="password" name="password" id="datos-password" required="">
+			<input type="text" name="action" value="insertarUsuario" required="" hidden="">
+			<input type="submit" name="submit" name="action" value="Enviar">
+		</form>
+	</section>
+</div>
+{% endblock %}
