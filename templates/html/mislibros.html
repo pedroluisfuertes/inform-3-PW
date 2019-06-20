@@ -8,20 +8,25 @@
 	<section class="bordes" id="libros-leidos-usuario">
 		<h2>Últimos libros leidos</h2>
 			<section id="libros-leidos-usuario-libros">
-				{% include 'templates/html/componentes/librosLeidosUsuario.html' %}
-				{% include 'templates/html/componentes/librosLeidosUsuario.html' %}
-				{% include 'templates/html/componentes/librosLeidosUsuario.html' %}
-				{% include 'templates/html/componentes/librosLeidosUsuario.html' %}
-				{% include 'templates/html/componentes/librosLeidosUsuario.html' %}
+			{% if librosLeidos %}
+			{% for libro in librosLeidos %}
+			{% include 'templates/html/componentes/librosLeidosUsuario.html' %}
+			{% endfor %}
+			{% else %}
+			<p>El usuario aún no ha leído ningún libro.</p>
+			{% endif %}
 			</section>
 	</section>
 	<section class="bordes" id="ultimos-libros-añadidos">
 		<h2>Últimos libros añadidos</h2>
 		<section class="flex-container flex-direction-column" id="ultimos-libros-añadidos-libros">
-			<a href="libro.php">Titulo Libro</a>
-			<a href="libro.php">Titulo Libro</a>
-			<a href="libro.php">Titulo Libro</a>
-			<a href="libro.php">Titulo Libro</a>
+			{% if libros %}
+			{% for libro in libros%}
+			<a href="libro.php?idLibro={{libro.getId()}}"><p>{{libro.getTitulo()}}</p></a>
+			{% endfor %}
+			{% else %}
+			<p>No hay libros en el sistema</p>
+			{% endif %}
 		</section>
 		<a id="link-dar-alta-libro" href="altalibro.php">Dar de alta un nuevo libro</a>
 	</section>

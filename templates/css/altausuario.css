@@ -12,7 +12,7 @@
 	margin-top: 1em; 
 }
 
-#formulario-datos > form > input[type="submit"]{
+#formulario-datos > form > button{
 	width: fit-content;
 	/* centramos */
 	margin-right: auto;

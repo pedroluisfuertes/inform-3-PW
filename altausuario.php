@@ -9,6 +9,8 @@
 
 	$argumentos = controlDeUsuarios();
 
+	//var_dump($_POST); 
+
 	if(isset($_POST["action"]) && $_POST["action"]==="insertarUsuario"){
 		if(isset($_POST["nombre"]))
 			$nombre = $_POST["nombre"];
@@ -22,8 +24,15 @@
 			$password = $_POST["password"];
 
 		$sql = "INSERT INTO `usuario`(`email`, `nombre`, `apellidos`, `pass`, `edad`) VALUES ('$email', '$nombre', '$apellidos', '$password', $edad)";
-		echo $sql;
-		$resultado =  BaseDeDatosRecomendadorLibros::insertar($sql);
+		//echo $sql;
+		$resultado = BaseDeDatosRecomendadorLibros::insertar($sql);
+
+		if($resultado){
+			$argumentos["mensaje"] = "Se ha insertado un usuario con éxito."; 
+		}else{
+			$argumentos["mensaje"] = "No se ha podido crear el usuario."; 
+
+		}
 		
 	}
 

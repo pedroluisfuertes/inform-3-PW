@@ -13,10 +13,9 @@
 	<section id="libros-mas-valorados" class="bordes">
 		<h1>Libros mejor valorados</h1>
 		<section class="flex-container flex-direction-column" id="libros-valorados">
+			{% for libro in libros%}
 			{% include 'templates/html/componentes/librosMejorValorados.html' %}
-			{% include 'templates/html/componentes/librosMejorValorados.html' %}
-			{% include 'templates/html/componentes/librosMejorValorados.html' %}
-			{% include 'templates/html/componentes/librosMejorValorados.html' %}
+			{% endfor %}
 		</section>
 	</section>
 </div>

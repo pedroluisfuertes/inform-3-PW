@@ -1,11 +1,7 @@
 <article class="libro-leido" class="libros-leidos flex-container align-items-center">
 	<section class="flex-container align-items-center justify-content-center libros-leidos-img">
-		<div>
-			<img src="templates/img/imagen-relacionada.jpg">
-		</div>
+		<img src="templates/img/imagen-relacionada.jpg">
 	</section>
 	<section class="libros-leidos-info">
-		<a href="libroleido.php"><h2>Libro</h2></a>
-		<h2>Autor</h2>
-	</section>
-</article>
+		<a href="libroleido.php"><h2>{{libro.getTitulo()}}</h2></a>
+		<h2>{{libro.getAutor()}

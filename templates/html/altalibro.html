@@ -3,7 +3,7 @@
 <link rel="stylesheet" type="text/css" href="templates/css/altalibro.css"/>
 {% endblock %}
 {% block main %}
-<form action="#" >
+<form action="#" method="post" id="formulario-alta-libro">
 	<div class="flex-container flex-direction-column justify-content-space-around bordes">
 		<section  class="flex-container" id="informacion-libro">
 			<section class="flex-container justify-content-center align-items-center" id="libro-img">
@@ -35,11 +35,11 @@
 		</section>
 		<section id="descripcion-libro">
 			<h2>Descripción</h2>
-			<textarea name="descripcion"></textarea>
+			<textarea name="descripcion" id="descripcion"></textarea>
 		</section>
 		<section id="opinion-libro">
 			<h2>Opinión</h2>
-			<textarea name="opinion"></textarea>
+			<textarea name="opinion" id="opinion"></textarea>
 		</section>
 		<section id="valoracion-libro">
 			<h2>Valoración</h2>
@@ -51,10 +51,20 @@
 				</div>
 				{% endfor %}
 			</section>
+			<input type="text" name="action" value="insertarLibro" hidden="">
 		</section>
 		<section class="flex-container justify-content-flex-end" id="enviar">
-			<input type="submit" value="Enviar">
+			{{ mensaje | raw }}
 		</section>
 	</div>
 </form>
+		<section class="flex-container justify-content-flex-end" id="enviar">
+			<button onclick="validarLibro()">Enviar</button>
+		</section>
+{% if mensaje %}
+
+{% endif %}
 {% endblock %}
+{% block javaScript %}
+<script src="templates/js/altaLibro.js"></script>
+{% endblock %} 

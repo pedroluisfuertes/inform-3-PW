@@ -6,20 +6,32 @@
 <div class="flex-container flex-direction-column">
 	<h1>Registrarse</h1>
 	<section id="formulario-datos">
-		<form method="post">
-			<label id="datos-nombre">Nombre</label>
+		<form action="#" method="post" >
+			<label for="datos-nombre">Nombre</label>
 			<input type="text" name="nombre" id="datos-nombre" required="">
-			<label id="datos-apellidos">Apellidos</label>
+			<label for="datos-apellidos">Apellidos</label>
 			<input type="text" name="apellidos" id="datos-apellidos" required="">
-			<label id="datos-edad">Edad</label>
+			<label for="datos-edad">Edad</label>
 			<input type="number" name="edad" id="datos-edad">
-			<label id="datos-email">E-mail</label>
+			<label for="datos-email">E-mail</label>
 			<input type="email" name="email" id="datos-email" required="">
-			<label id="datos-password">Contraseña</label>
+			<label for="datos-tfn">Teléfono</label>
+			<input type="tel" name="tfn" id="datos-tfn" required="">
+			<label for="datos-password">Contraseña</label>
 			<input type="password" name="password" id="datos-password" required="">
 			<input type="text" name="action" value="insertarUsuario" required="" hidden="">
-			<input type="submit" name="submit" name="action" value="Enviar">
 		</form>
+		<div class="flex-container justify-content-center">
+			<button onclick="validarUsuario()">Enviar</button>
+		</div>
+		{% if mensaje %}
+			<p>{{mensaje}}</p>
+		{% endif %}
 	</section>
 </div>
 {% endblock %}
+{% block javaScript %}
+<script src="templates/js/altausuario.js"></script>
+{% endblock %} 
+
+

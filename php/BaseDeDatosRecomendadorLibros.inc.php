@@ -18,7 +18,7 @@ class BaseDeDatosRecomendadorLibros
 	public static function getConexion() {
 
 		if(! self::$baseDeDatos){
-			self::$baseDeDatos = new BaseDeDatos("localhost", "PW", "6M5f9hZ2CFSAkYRk", "recomendacionlibros");
+			self::$baseDeDatos = new BaseDeDatos("localhost", "x45888409", "45888409", "db45888409_pw1819");
 			self::$conexion = self::$baseDeDatos -> getConexion();
 
 			if(! self::$conexion)

@@ -5,6 +5,9 @@
 {% block main %}
 <div class="flex-container flex-direction-column">
 	<h1>Mis datos</h1>
+	<section class="flex-container justify-content-center">
+		<img src="templates/img/imagen-personal.jpg" height="200em" width="200em" onmouseover="misLibros()">
+	</section>
 	<section id="formulario-datos">
 		<form method="post">
 			<label id="datos-nombre">Nombre</label>
@@ -25,4 +28,31 @@
 		{% endif %}
 	</section>
 </div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span id="close">&times;</span>
+    {% if libros%}
+    <section class="libros-leidos-info flex-container justify-content-space-around">
+		<h2>Título</h2>
+		<h2>Autor</h2>
+	</section>
+    {% for libro in libros %}
+	<section class="libros-leidos-info flex-container justify-content-space-around">
+		<a href="libro.php?idLibro={{libro.getId()}}"><p>{{libro.getTitulo()}}</p></a>
+		<p>{{libro.getAutor()}}</p>
+	</section>
+	{% endfor %}
+	{% else %}
+	<p>No tienes libros subidos.</p>
+	{% endif %}
+  </div>
+
+</div>
+{% endblock %}
+{% block javaScript %}
+<script src="templates/js/datospersonales.js"></script>
 {% endblock %}

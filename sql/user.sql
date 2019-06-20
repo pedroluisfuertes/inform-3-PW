@@ -4,4 +4,4 @@ create table usuario(
 	apellidos varchar(256) not null, 
 	pass varchar(256) not null, 
 	edad int
-)
+);

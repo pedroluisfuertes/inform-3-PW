@@ -37,7 +37,7 @@
 		*/
 		if(isset($_POST["action"]) && $_POST["action"] === "logout"){
 			if (session_status()==PHP_SESSION_NONE)
-			session_start();
+				session_start();
 			// Borrar variables de sesión
 			session_unset(); 
 			// Obtener parámetros de cookie de sesión
@@ -48,6 +48,7 @@
 			// Destruir sesión
 			session_destroy();
 		}
+		
 		if (isset($_SESSION["nombreUsuario"])) {
 			$argumentos["nombreUsuario"] = $_SESSION["nombreUsuario"];
 		}
